@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Tobero - Me</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+      function myFunction() {
+        var x = document.getElementById("topnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
+  </head>
+  <body>
+    <div class="topnav" id="topnav">
+      <a class="back" href="../../games.html">Back</a>
+      <a href="play.html">Play</a>
+      <a class="active" href="howToPlay.html">How to play</a>
+      <a href="download.html">Downloads</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <h1>Controls</h1>
+    <h2>Movement</h2>
+    <h3>-> Use the w, s keys to move forward or backward</h3>
+    <h3>-> use the a, d keys to rotate left or right</h3>
+    <h2>Combat</h2>
+    <h3>-> use the space to shoot a bullet</h3>
+    <h1>Multiplayer</h1>
+    <h3>If you want to play, you need to host a server or join a game</h3>
+    <h3>The server is running at port 7777, or use hamachi. To connect use the sevrer's IP</h3>
+    <h1>Objectiv</h1>
+    <h3>Kill your enemy using the bullets</h3>
+    <h1>Notes</h1>
+    <h3>Up to 4 players can play this game at the same time</h3>
+
+    <script>
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        container.className = "unity-mobile";
+      }
+    </script>
+
+  </body>
+</html>
