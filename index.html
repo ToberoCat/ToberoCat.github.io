@@ -1,44 +1,16 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Tobero - Me</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script>
-      function myFunction() {
-        var x = document.getElementById("topnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
-      </script>
-  </head>
-  <body>
-    <div class="topnav" id="topnav">
-      <a class="active" href="me.html">Me</a>
-      <a href="about.html">About</a>
-      <a href="games.html">Games</a>
-      <a href="silly.html">Silly</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </div>
-
-    <script>
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
-
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
-        container.className = "unity-mobile";
-      }
-    </script>
-
-  </body>
+<html>
+    <header>
+        <title>
+            Tobero
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </header>
+    <body>
+        <div class="topbar"></div>
+        <h1>Test</h1>
+        <h2>Test</h2>
+        <h3>Test</h3>
+        <p>Test</p>
+    </body>
 </html>
