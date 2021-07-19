@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 body {
-    background-color: #262014;
-    color: whitesmoke;
-    font-family: ;
+    background-color: #202426;
+    color: #F2F2F2;
+    font-family: "Roboto";
 }
 
 .topbar {
