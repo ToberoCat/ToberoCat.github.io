@@ -11,6 +11,13 @@ a {
   color: #F2F2F2;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
 .discord {
   font-size: 50px;
 }
