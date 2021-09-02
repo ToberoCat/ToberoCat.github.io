@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>
+            Tobero - Improved Factions
+        </title>
+        <script src="https://kit.fontawesome.com/1499dedf5c.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="../style.css">
+    </header>
+    <body>
+        <div class="topbar">
+            <a href="../index.html" class="openNav next"><i class="fas fa-arrow-left"></i></a>
+            <img src="Improved-Factions.png" alt="Improved Factions - Beta" class="next center" style="padding: 7% 0px 0px 0px;"></img>
+        </div>
+        <div id="main">
+            <br>
+            <div id="download">
+                <a href="https://www.spigotmc.org/resources/improved-factions.95617/" style="font-size: large; float: right;"><i class="fas fa-download"></i> Download it</a>
+            </div>
+            <div>
+                <br>
+                <br>
+                <br>
+                <h1>Features</h1>
+                <h3>Create factions, claim chunks and raid others</h3>
+            </div>
+        </div>
+
+        <div>
+            <a href="https://discord.gg/4kcceWGmYt" class="discord"><i class="fab fa-discord"></i></a>
+        <script>
+            //Collabsales
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+            
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                    setTimeout(function() { content.style.display = "none"; }, 200);
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.display = "block";
+                    content.style.maxHeight = content.scrollHeight + "px";
+                } 
+              });
+            }
+            </script>
+            <script>
+                if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+                  // Mobile device style: fill the whole browser client area with the game canvas:
+          
+                  var meta = document.createElement('meta');
+                  meta.name = 'viewport';
+                  meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+                  document.getElementsByTagName('head')[0].appendChild(meta);
+                  container.className = "unity-mobile";
+                }
+              </script>
+    </body>
+</html>

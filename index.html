@@ -4,15 +4,70 @@
         <title>
             Tobero
         </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="style.css">
     </header>
     <body>
-        <div class="topbar">
-            <a href="">link text</a>
+        <div id="sideNav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <p class="collapsible">Plugins</p>
+            <div class="content">
+                <a href="improved-factions/index.html">Improved Factions</a>
+            </div>
         </div>
-        <h1>Test</h1>
-        <h2>Test</h2>
-        <h3>Test</h3>
-        <p>Test</p>
+        
+        <!-- Use any element to open the sidenav -->
+        
+        <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+        <div class="topbar">
+            <button class="openNav fa fa-bars" onclick="openNav()"></button>
+            
+        </div>
+        <div id="main">
+        </div>
+
+        <script>
+            //Collabsales
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+            
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                    setTimeout(function() { content.style.display = "none"; }, 200);
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.display = "block";
+                    content.style.maxHeight = content.scrollHeight + "px";
+                } 
+              });
+            }
+            </script>
+        <script>
+            /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+            function openNav() {
+              document.getElementById("sideNav").style.width = "250px";
+              document.getElementById("main").style.marginLeft = "250px";
+            }
+            
+            /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+            function closeNav() {
+              document.getElementById("sideNav").style.width = "0";
+              document.getElementById("main").style.marginLeft = "0";
+            }
+        </script>
+        <script>
+            if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+              // Mobile device style: fill the whole browser client area with the game canvas:
+      
+              var meta = document.createElement('meta');
+              meta.name = 'viewport';
+              meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+              document.getElementsByTagName('head')[0].appendChild(meta);
+              container.className = "unity-mobile";
+            }
+          </script>
     </body>
 </html>
