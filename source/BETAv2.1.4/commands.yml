@@ -1,0 +1,38 @@
+commands:
+  listBanned: []
+  help: []
+  create: []
+  leave: []
+  join: []
+  save: []
+  info: []
+  extension:
+    download: []
+    refresh: []
+    list: []
+    remove: []
+  upgrade: []
+  delete: []
+  claim: []
+  claimChunk:
+    one: []
+    auto: []
+  unclaim:
+    one: []
+    auto: []
+  version: []
+  settings: []
+  invite: []
+  rank:
+    set: []
+    permissions: []
+  kick: []
+  map: []
+  description: []
+  showBounds: []
+  ban: [ "b", "ba", "IDontLikeThisPlayer" ]
+  unban: []
+  reload:
+  - rlConfig
+  - rl
+  - reloadConfig
