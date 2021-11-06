@@ -1,0 +1,23 @@
+version: BETAv4.0.0
+f:
+  name:
+    displayName: name
+    description: A improved faction faction
+    motd: ''
+    power: 9
+    claimedChunks: 0
+    settings:
+      flags:
+      - motd::Flag{type=Function; selected=0; currentBool=false}
+      - rename::Flag{type=Function; selected=0; currentBool=false}
+      - openType::Flag{type=Enum; selected=1; currentBool=false}
+      permissions:
+      - claim_chunk::FactionRankPermission{ranks=[Owner, Admin]}
+      - unclaim_chunk::FactionRankPermission{ranks=[Owner, Admin]}
+      - build::FactionRankPermission{ranks=[Member, Owner, Admin]}
+      - break::FactionRankPermission{ranks=[Member, Owner, Admin]}
+      - invite::FactionRankPermission{ranks=[Member, Owner, Admin]}
+      - listBanned::FactionRankPermission{ranks=[Owner, Admin]}
+    members:
+    - FactionMember{uuid=15991352-b2ca-48ec-9b71-6f5bcb8e097e, rank=Owner}
+    banned: []

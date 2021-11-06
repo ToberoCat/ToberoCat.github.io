@@ -1,0 +1,28 @@
+factions:
+  maxMembers: 50
+  startClaimPower: 9
+  maxClaimPower: 100
+  powerPerPlayer: 3
+  flags:
+    motd: true
+    rename: true
+    openType: true
+  permissions:
+    claim_chunk: true
+    unclaim_chunk: true
+    build: true
+    break: true
+    invite: true
+    listBanned: true
+general:
+  updateChecker: true
+  mapViewDistance: 7
+  commandDescriptions: true
+  connectedChunks: false
+  allowClaimProtection: true
+  debugMode: false
+  allowNegativeBalance: false
+  messageType: TITLE
+performance:
+  threadingMethode: SYNC
+  stopwatch: false

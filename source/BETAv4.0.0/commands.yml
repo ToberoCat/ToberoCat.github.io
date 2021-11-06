@@ -1,0 +1,112 @@
+commands:
+  help:
+    aliases: []
+    costs: 0
+  create:
+    aliases: []
+    costs: 0
+  leave:
+    aliases: []
+    costs: 0
+  join:
+    aliases: []
+    costs: 0
+  save:
+    aliases: []
+    costs: []
+  extension:
+    aliases: []
+    costs: 0
+    download:
+      aliases: []
+      costs: []
+    refresh:
+      aliases: []
+      costs: []
+    list:
+      aliases: []
+      costs: []
+    remove:
+      aliases: []
+      costs: []
+  upgrade:
+    aliases: []
+    costs: 0
+  delete:
+    aliases: []
+    costs: 0
+  unclaim:
+    aliases: []
+    costs: 0
+    one:
+      aliases: []
+      costs: []
+    auto:
+      aliases: []
+      costs: []
+  version:
+    aliases: []
+    costs: 0
+  settings:
+    aliases: []
+    costs: 0
+  invite:
+    aliases: []
+    costs: 0
+  rank:
+    aliases: []
+    costs: 0
+    set:
+      aliases: []
+      costs: []
+    permissions:
+      aliases: []
+      costs: []
+  kick:
+    aliases: []
+    costs: 0
+  map:
+    aliases: []
+    costs: 0
+  description:
+    aliases: []
+    costs: 0
+  ban:
+    aliases: []
+    costs: 0
+  unban:
+    aliases: []
+    costs: []
+  reload:
+    aliases: []
+    costs: []
+  listBanned:
+    aliases: []
+    costs: 0
+  rules:
+    aliases: []
+    costs: 0
+  setRules:
+    aliases: []
+    costs: 0
+  admin:
+    aliases: []
+    costs: 0
+  disband:
+    aliases: []
+    costs: 0
+  sJoin:
+    aliases: []
+    costs: 0
+  claim:
+    costs: 0
+    one:
+      aliases: []
+      costs: []
+    auto:
+      aliases: []
+      costs: []
+    default: claim
+    aliases:
+    - c
+version: BETAv4.0.0
