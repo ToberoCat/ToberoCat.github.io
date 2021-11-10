@@ -11,6 +11,10 @@ a {
   color: #F2F2F2;
 }
 
+ul.disc {
+	list-style-type: disc;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -21,6 +25,10 @@ img {
 .discord {
   font-size: 50px;
   padding: 0px 0px 0px 20px;
+}
+
+.inline {
+  display: inline;
 }
 
 .sidenav {
@@ -55,6 +63,10 @@ img {
   color: #818181;
   display: block;
   transition: 0.3s;
+}
+
+.right {
+  text-align:right;
 }
 
 #main {
