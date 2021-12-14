@@ -1,0 +1,24 @@
+power:
+  enabled: true
+  chunkPowerConsume: 3
+  memberDeathConsume: 10
+  regenerationPerHour: 4
+  maxDefaultFaction: 20
+  maxPowerPerPlayer: 5
+gui:
+  wrapLength: 20
+commands:
+  standby:
+  - tellraw @a {"text":"Standby enabled"}
+general:
+  newestConfig: 14/12/2021
+  useSQL: false
+  commandDescriptions: true
+  timeFormat: dd/MM/yyyy
+  prefix: '&e&lImprovedFactions'
+debug:
+  logLevel:
+  - INFO
+  - WARNING
+  - SEVERE
+version: v1.0

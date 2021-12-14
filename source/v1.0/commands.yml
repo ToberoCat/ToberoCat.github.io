@@ -1,0 +1,17 @@
+commands:
+  removeBackups:
+    costs: 0
+    aliases: []
+  reload:
+    costs: 0
+    aliases: []
+  save:
+    costs: 0
+    aliases: []
+  backup:
+    costs: 0
+    aliases: []
+  config:
+    costs: 0
+    aliases: []
+version: v1.0

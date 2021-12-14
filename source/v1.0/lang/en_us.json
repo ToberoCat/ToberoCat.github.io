@@ -1,0 +1,19 @@
+{
+  "messages" : {
+    "command.config.backup.description" : "&fManage what data gets restored from the backup files",
+    "command.config.save.description" : "&fSave the config data. &8Note: &fThis will maybe save some files to the backup",
+    "command.config.reload.description" : "&fReload the configs. &8Note: &fThis will &f&l&nnot&f save the configs before reloading",
+    "command.config.reload.success" : "&a&lSuccessfully&f reloaded the configs",
+    "command.not-exist" : "&cThis command doesn't exist",
+    "command.config.description" : "&fAccess the config commands",
+    "gui.config.backup.title" : "&e&lImprovedFaction &econfig backup",
+    "command.faction.create.description" : "&fCreate a new faction",
+    "command.config.backup.remove.success" : "&a&lSuccessfully&f removed all backups",
+    "command.config.backup.remove.description" : "&fThis will remove all loaded backup files. &6&lWarning:&f This cannot be undone",
+    "command.config.save.backup" : "&f&6&lWarning:&f looks like something went wrong while saving {config}. Please check &7console&f / &7reload&f. When done, use &7/f config backup",
+    "command.faction.create.success" : "&a&lSuccessfully&f created your faction {faction_name}",
+    "message.plugin-standby" : "&fThe plugin has put itself in standby mode. &f&nAll&f commands are now disabled. &f&nOnly&f simple claim protection is running. &f&nCheck the console for more details",
+    "command.faction.create.failed" : "&c&lFailed&f to create your faction. {error}",
+    "command.config.save.success" : "&fSuccessfully saved {config}"
+  }
+}
