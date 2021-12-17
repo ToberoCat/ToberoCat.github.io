@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minera 2 Mapview</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/1499dedf5c.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="Javascript.js"></script>
+</head>
+<body>
+
+    <h1 class="center-text">Mineria 2 Mapviewer</h1>
+
+    <div id="streamer-sidebar" class="streamer-sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h2 class="title">Streamers</h2>
+
+        <div class="element">
+            <img src="Icons/Crashstyle204.svg" style="margin-top: 10px; display: inline; float: left;" width="20%" height="20%">
+            <h4 onclick="openURL('https://www.twitch.tv/crashstyle204')" style="margin-left: 10px; display: inline; float: left;">Crashstyle204</h4>
+        </div>
+        <br>
+        <div class="element">
+            <img src="Icons/Bebu0815.svg" style="margin-top: 10px; display: inline; float: left;" width="20%" height="20%">
+            <h4 onclick="openURL('https://www.twitch.tv/bebu0815')" style="margin-left: 10px; display: inline; float: left;">Bebu0815</h4>
+        </div>
+
+    </div>
+
+    <div id="map-container" class="map-view-selection">
+        <!--Js will add all maps-->
+        <i class="fas fa-video fa-2x stream-button" onclick="openNav()"></i>
+    </div>
+    <div id="map-info-container" class="map-info">
+        <h4 id="map-info" class="center-text">Map wurde um 22:00 Uhr hochgeladen</h4>
+    </div>
+
+    <img id="MapView" src="" width="100%", height="auto">
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <p>© Written & Developed by Tobero</p>
+    </footer>
+
+    <script>
+        const IMAGES = ["10_12.22_11", "15_12.14_22", "15_12.20_31"];
+        const  MONTHS = ["Jänner", "Februar", "März", "Aüril", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"];
+
+        let currentImage = 0;
+
+        OnLoad();
+
+        function OnLoad() {
+            for (let i = 0; i < IMAGES.length; i++) {
+                var mapDateRaw = IMAGES[i].split(".")[0];
+
+                var month = MONTHS[parseInt(mapDateRaw.split("_")[1])-1];
+                var day = mapDateRaw.split("_")[0];
+
+                jQuery(`#map-container`).append(`<button id="${i}" onclick="setImage(${i}, ${i})"
+                    class="map-view-selection-bt">Map vom ${day}. ${month}</button>`);
+            }
+            setImage(0, 0);
+        }
+
+        function openNav() {
+            document.getElementById("streamer-sidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("streamer-sidebar").style.width = "0";
+        }
+
+        function nextImg() {
+            document.getElementById("MapView").src = "Maps/Map_Mineria_"+ IMAGES[currentImage] + ".png";
+            var mapTimeRaw = IMAGES[currentImage].split(".")[1];
+
+            document.getElementById(currentImage).classList.add("active");
+
+            document.getElementById("map-info").innerHTML = `Map wurde am
+             ${mapTimeRaw.split("_")[0]}:${mapTimeRaw.split("_")[1]} hochgeladen`;
+
+            currentImage++;
+            if (currentImage >= IMAGES.length) {
+                currentImage = 0;
+            }
+        }
+
+        function setImage(id, imageIndex) {
+            var elements = document.getElementsByClassName('map-view-selection-bt');
+            for (var i = 0; i < elements.length; ++i) {
+                var item = elements[i];
+                item.classList.remove("active");
+            }
+            var mapTimeRaw = IMAGES[id].split(".")[1];
+
+            document.getElementById("map-info").innerHTML = `Map wurde am
+             ${mapTimeRaw.split("_")[0]}:${mapTimeRaw.split("_")[1]} hochgeladen`;
+
+            document.getElementById(id).classList.add("active");
+            document.getElementById("MapView").src = "Maps/Map_Mineria_"+ IMAGES[imageIndex] + ".png";
+            currentImage = imageIndex
+        }
+    </script>
+</body>
+</html>
