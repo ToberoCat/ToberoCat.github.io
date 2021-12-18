@@ -10,7 +10,16 @@
 </head>
 <body>
 
-    <h1 class="center-text">Mineria 2 Mapviewer</h1>
+    <div class="top-bar" width="100%">
+        <div id="map-container" class="map-view-selection" width="100%">
+            <!--Js will add all maps-->
+            <i class="fas fa-video fa-2x stream-button" onclick="openNav()"></i>
+        </div>
+
+        <div id="map-info-container" class="map-info" width="100%">
+            <h4 id="map-info" class="center-text">Map wurde um 22:00 Uhr hochgeladen</h4>
+        </div>
+    </div>
 
     <div id="streamer-sidebar" class="streamer-sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -28,26 +37,21 @@
 
     </div>
 
-    <div id="map-container" class="map-view-selection">
-        <!--Js will add all maps-->
-        <i class="fas fa-video fa-2x stream-button" onclick="openNav()"></i>
-    </div>
-    <div id="map-info-container" class="map-info">
-        <h4 id="map-info" class="center-text">Map wurde um 22:00 Uhr hochgeladen</h4>
-    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
     <img id="MapView" src="" width="100%", height="auto">
-    <br>
-    <br>
-    <br>
-    <br>
 
     <footer>
         <p>© Written & Developed by Tobero</p>
     </footer>
 
     <script>
-        const IMAGES = ["10_12.22_11", "15_12.14_22", "15_12.20_31"];
+        const IMAGES = ["10_12.22_11", "15_12.14_22", "15_12.20_31", "18_12.9_58"];
         const  MONTHS = ["Jänner", "Februar", "März", "Aüril", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"];
 
         let currentImage = 0;
@@ -64,6 +68,15 @@
                 jQuery(`#map-container`).append(`<button id="${i}" onclick="setImage(${i}, ${i})"
                     class="map-view-selection-bt">Map vom ${day}. ${month}</button>`);
             }
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key == "ArrowRight") {
+                    nextImg();
+                } else if (e.key == "ArrowLeft") {
+                    lastImg();
+                }
+            });
+
             setImage(0, 0);
         }
 
@@ -75,19 +88,44 @@
             document.getElementById("streamer-sidebar").style.width = "0";
         }
 
-        function nextImg() {
+        function lastImg() {
+            currentImage--;
+            if (currentImage < 0) {
+                currentImage = IMAGES.length-1;
+            }
+
             document.getElementById("MapView").src = "Maps/Map_Mineria_"+ IMAGES[currentImage] + ".png";
             var mapTimeRaw = IMAGES[currentImage].split(".")[1];
 
+            var elements = document.getElementsByClassName('map-view-selection-bt');
+            for (var i = 0; i < elements.length; ++i) {
+                var item = elements[i];
+                item.classList.remove("active");
+            }
             document.getElementById(currentImage).classList.add("active");
 
             document.getElementById("map-info").innerHTML = `Map wurde am
              ${mapTimeRaw.split("_")[0]}:${mapTimeRaw.split("_")[1]} hochgeladen`;
+        }
 
+        function nextImg() {
             currentImage++;
             if (currentImage >= IMAGES.length) {
                 currentImage = 0;
             }
+
+            document.getElementById("MapView").src = "Maps/Map_Mineria_"+ IMAGES[currentImage] + ".png";
+            var mapTimeRaw = IMAGES[currentImage].split(".")[1];
+
+            var elements = document.getElementsByClassName('map-view-selection-bt');
+            for (var i = 0; i < elements.length; ++i) {
+                var item = elements[i];
+                item.classList.remove("active");
+            }
+            document.getElementById(currentImage).classList.add("active");
+
+            document.getElementById("map-info").innerHTML = `Map wurde am
+             ${mapTimeRaw.split("_")[0]}:${mapTimeRaw.split("_")[1]} hochgeladen`;
         }
 
         function setImage(id, imageIndex) {
