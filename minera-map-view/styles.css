@@ -53,6 +53,19 @@ footer p {
     margin-bottom: 10px;
 }
 
+.left {
+    position: absolute;
+    margin-left: 25px;
+    top: 23px;
+    float: left;
+}
+
+.right {
+    float: right;
+    text-align: right;
+    margin-right: 25px;
+}
+
 .map-view-selection button.active {
     background-color: #5A37A6;
     color: white;

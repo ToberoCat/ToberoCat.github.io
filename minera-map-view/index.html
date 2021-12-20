@@ -17,7 +17,8 @@
         </div>
 
         <div id="map-info-container" class="map-info" width="100%">
-            <h4 id="map-info" class="center-text">Map wurde um 22:00 Uhr hochgeladen</h4>
+            <h4 id="map-info-time" class="right">Map wurde um 22:00 Uhr hochgeladen</h4>
+            <h4 id="map-info-zones" class="fas fa-landmark fa-2x left" style="!important; display: inline-block;"></h4>
         </div>
     </div>
 
@@ -51,7 +52,7 @@
     </footer>
 
     <script>
-        const IMAGES = ["10_12.22_11", "15_12.14_22", "15_12.20_31", "18_12.9_58"];
+        const IMAGES = ["10_12.22_11", "15_12.14_22", "15_12.20_31", "18_12.9_58", "20_12.19_37"];
         const  MONTHS = ["Jänner", "Februar", "März", "Aüril", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"];
 
         let currentImage = 0;
@@ -104,8 +105,12 @@
             }
             document.getElementById(currentImage).classList.add("active");
 
-            document.getElementById("map-info").innerHTML = `Map wurde am
+            document.getElementById("map-info-time").innerHTML = `Map wurde am
              ${mapTimeRaw.split("_")[0]}:${mapTimeRaw.split("_")[1]} hochgeladen`;
+
+            /* ToDo: Check if there is a .zones file, if yes, show the zone button */
+
+            //document.getElementById("map-info-zones").style.display =
         }
 
         function nextImg() {
@@ -124,7 +129,7 @@
             }
             document.getElementById(currentImage).classList.add("active");
 
-            document.getElementById("map-info").innerHTML = `Map wurde am
+            document.getElementById("map-info-time").innerHTML = `Map wurde am
              ${mapTimeRaw.split("_")[0]}:${mapTimeRaw.split("_")[1]} hochgeladen`;
         }
 
@@ -136,7 +141,7 @@
             }
             var mapTimeRaw = IMAGES[id].split(".")[1];
 
-            document.getElementById("map-info").innerHTML = `Map wurde am
+            document.getElementById("map-info-time").innerHTML = `Map wurde am
              ${mapTimeRaw.split("_")[0]}:${mapTimeRaw.split("_")[1]} hochgeladen`;
 
             document.getElementById(id).classList.add("active");
