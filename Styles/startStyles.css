@@ -1,0 +1,56 @@
+@font-face {
+    font-family: Helvetica;
+    src: url("../Fonts/Helvetica/Helvetica-Bold.ttf");
+}
+
+body {
+    background: #101821 url("../Images/Waves_start.svg") no-repeat;
+    background-size: 100%;
+    font-family: Helvetica, serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+#project-container {
+    margin-top: 35%;
+    width: 100%;
+    overflow-x: hidden;
+    white-space: nowrap;
+    cursor: grab;
+}
+
+.tobero {
+    color: ghostwhite;
+}
+
+.project {
+    display: inline-block;
+    border-radius: 10px;
+    background: floralwhite;
+    min-width: 500px;
+    min-height: 330px;
+    width: 500px;
+    box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.project a {
+    color: black;
+}
+
+.center {
+    text-align: center;
+}
+
+.project-thumbnail {
+    display:block;
+    margin:auto;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.disable-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
