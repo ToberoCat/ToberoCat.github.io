@@ -7,21 +7,43 @@ body {
     background: #101821 url("../Images/Waves_start.svg") no-repeat;
     background-size: 100%;
     font-family: Helvetica, serif;
+    color: #fff;
+}
+
+::selection {
+    background-color: #04A85E;
 }
 
 a {
     text-decoration: none;
 }
 
-#project-container {
-    margin-top: 35%;
+.project-container {
     width: 100%;
     overflow-x: hidden;
     white-space: nowrap;
     cursor: grab;
+    margin-top: 2%;
+}
+#about {
+    position: relative;
+    animation: fadeIn .6s ease-in both;
+}
+#about h1, h2 {
+    text-align: center;
+}
+
+.fadeIn {
+    animation: fadeIn .6s ease-in both;
+}
+
+.title {
+    margin-left: 1%;
+    font-size: 50px;
 }
 
 .tobero {
+    margin-left: 1%;
     color: ghostwhite;
 }
 
@@ -53,4 +75,15 @@ a {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
 }
