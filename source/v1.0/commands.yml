@@ -1,4 +1,67 @@
 commands:
+  download:
+    costs: 0
+    aliases: []
+  extension:
+    costs: 0
+    aliases: []
+  ally:
+    costs: 0
+    aliases: []
+  relation:
+    costs: 0
+    aliases: []
+  one:
+    costs: 0
+    aliases: []
+  claim:
+    costs: 0
+    aliases: []
+  player:
+    costs: 0
+    aliases: []
+  settings:
+    costs: 0
+    aliases: []
+  disband:
+    costs: 0
+    aliases: []
+  reset:
+    costs: 0
+    aliases: []
+  admin:
+    costs: 0
+    aliases: []
+  help:
+    costs: 0
+    aliases: []
+  unclaim:
+    costs: 0
+    aliases: []
+  safezone:
+    costs: 0
+    aliases: []
+  zones:
+    costs: 0
+    aliases: []
+  delete:
+    costs: 0
+    aliases: []
+  create:
+    costs: 0
+    aliases: []
+  standby:
+    costs: 0
+    aliases: []
+  disable:
+    costs: 0
+    aliases: []
+  plugin:
+    costs: 0
+    aliases: []
+  configure:
+    costs: 0
+    aliases: []
   removeBackups:
     costs: 0
     aliases: []
@@ -14,4 +77,4 @@ commands:
   config:
     costs: 0
     aliases: []
-version: v1.0
+version: '1.0'

@@ -1,3 +1,14 @@
+commands:
+  forbidden:
+  - 'tellraw @a {"text":"This word, {word}, is maybe similar to {similar}. Used: {player_name},
+    {player_uuid} while {task}. {similarityPer}% similar "}'
+  standby:
+  - tellraw @a {"text":"Standby enabled"}
+faction:
+  permanent: false
+  configManager: false
+history:
+  territoryChange: false
 power:
   enabled: true
   chunkPowerConsume: 3
@@ -5,20 +16,27 @@ power:
   regenerationPerHour: 4
   maxDefaultFaction: 20
   maxPowerPerPlayer: 5
+forbidden:
+  factionNames:
+  - fuck
+  - ass
+  - stupid
+  checkLeetspeak: true
+  reportAtPercent: 39.99
+  disbandAtPercent: 69.99
+  checkFactionNames: true
 gui:
   wrapLength: 20
-commands:
-  standby:
-  - tellraw @a {"text":"Standby enabled"}
 general:
-  newestConfig: 14/12/2021
+  debugMode: false
+  colorConsole: true
   useSQL: false
   commandDescriptions: true
-  timeFormat: dd/MM/yyyy
+  printStacktrace: false
   prefix: '&e&lImprovedFactions'
 debug:
   logLevel:
   - INFO
   - WARNING
   - SEVERE
-version: v1.0
+version: '1.0'
