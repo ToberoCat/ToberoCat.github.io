@@ -1,112 +1,107 @@
 <!DOCTYPE html>
 <html>
-    <header>
-        <title>Tobero</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="Scripts/DragScroll.js"></script>
-        <script src="Scripts/Index.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="Styles/startStyles.css">
+<header>
+    <title>Tobero</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="Scripts/DragScroll.js"></script>
+    <script src="Scripts/Index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="Styles/startStyles.css" rel="stylesheet" type="text/css">
 
-        <script>
-            FitWebsite();
-            dragScroll("project-container");
-            dragScroll("skills-container");
+    <script>
+        FitWebsite();
+        dragScroll("project-container");
+        dragScroll("skills-container");
+    </script>
+</header>
+<body>
+<a href="index.html"><h1 class="tobero disable-select">Tobero</h1></a>
 
-            function isElementInViewport(elem) {
-                var $elem = $(elem);
+<div id="about" style="margin-top: 5%">
+    <h1>Hey, my name is Tobias</h1>
+    <h2>I'm a software developer from austria</h2>
+</div>
 
-                // Get the scroll position of the page.
-                var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
-                var viewportTop = $(scrollElem).scrollTop();
-                var viewportBottom = viewportTop + $(window).height();
-
-                // Get the position of the element on the page.
-                var elemTop = Math.round( $elem.offset().top );
-                var elemBottom = elemTop + $elem.height();
-
-                return ((elemTop < viewportBottom) && (elemBottom > viewportTop));
-            }
-        </script>
-    </header>
-    <body>
-        <a href="index.html"><h1 class="tobero disable-select">Tobero</h1></a>
-
-        <div id="about" style="margin-top: 5%">
-            <h1>Hey, my name is Tobias</h1>
-            <h2>I'm a software developer from austria</h2>
-        </div>
-
-        <h1 class="title" style="margin-top: 28%;">Skills</h1>
-        <div id="skills-container" class="project-container">
-            <div class="project">
-                <img src="Images/discordjs.svg" width="100%" height="auto" class="disable-select project-thumbnail"
-                     draggable="false">
-                <a href="https://discord.js.org/#/" target="_blank"><h2 class="center disable-select">Discord.js Bots</h2></a>
-            </div>
-            <div class="project">
-                <img src="Images/spigot.png" width="100%" height="auto" class="disable-select project-thumbnail"
-                     draggable="false">
-                <a href="https://spigotmc.org/" target="_blank"><h2 class="center disable-select">Minecraft Spigot Plugins</h2></a>
-            </div>
-            <div class="project">
-                <img src="Images/forge.png" width="100%" height="auto" class="disable-select project-thumbnail"
-                     draggable="false">
-                <a href="https://forums.minecraftforge.net/" target="_blank"><h2 class="center disable-select">Minecraft Forge Mods</h2></a>
-            </div>
-            <div class="project">
-                <img src="Images/fabric.png" width="100%" height="auto" class="disable-select project-thumbnail"
-                     draggable="false">
-                <a href="https://fabricmc.net/" target="_blank"><h2 class="center disable-select">Minecraft Fabric Mods</h2></a>
-            </div>
-            <div class="project">
-                <img src="Images/tensorflow.svg" width="100%" height="auto" class="disable-select project-thumbnail"
-                     draggable="false">
-                <a href="https://www.tensorflow.org/" target="_blank"><h2 class="center disable-select">Machine learning with tensorflow</h2></a>
-            </div>
-            <div class="project">
-                <img src="Images/java.svg" width="100%" height="auto" class="disable-select project-thumbnail"
-                     draggable="false">
-                <a href="https://java.com/" target="_blank"><h2 class="center disable-select">Java</h2></a>
-            </div>
-            <div class="project">
-                <img src="Images/nodejs.svg" width="100%" height="auto" class="disable-select project-thumbnail"
-                     draggable="false">
-                <a href="https://nodejs.org/" target="_blank"><h2 class="center disable-select">NodeJs</h2></a>
-            </div>
-            <div class="project">
-                <img src="Images/python.svg" width="100%" height="auto" class="disable-select project-thumbnail"
-                     draggable="false">
-                <a href="https://www.python.org/" target="_blank"><h2 class="center disable-select">Python</h2></a>
-            </div>
-            <div class="project">
-                <img src="Images/C.png" width="100%" height="auto" class="disable-select project-thumbnail"
-                     draggable="false">
-                <a href="https://en.wikipedia.org/wiki/The_C_Programming_Language" target="_blank"><h2 class="center disable-select">C</h2></a>
-            </div>
-            <div class="project">
-                <img src="Images/Cpp.png" width="100%" height="auto" class="disable-select project-thumbnail"
-                     draggable="false">
-                <a href="https://en.wikipedia.org/wiki/CPP" target="_blank"><h2 class="center disable-select">C++</h2></a>
-            </div>
-            <div class="project">
-                <img src="Images/C%23.png" width="100%" height="auto" class="disable-select project-thumbnail"
-                     draggable="false">
-                <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" target="_blank"><h2 class="center disable-select">C#</h2></a>
-            </div>
-            <div class="project">
-                <img src="Images/android.svg" width="100%" height="auto" class="disable-select project-thumbnail"
-                     draggable="false">
-                <a href="https://developer.android.com/" target="_blank"><h2 class="center disable-select">Android</h2></a>
-            </div>
-        </div>
-        <h1 class="title">Projects</h1>
-        <div id="project-container" class="project-container">
-            <div class="project">
-                <img src="Images/ImprovedFactions.png" width="100%" height="auto" class="disable-select project-thumbnail"
-                     draggable="false">
-                <a href="improved-factions/index.html"><h2 class="center disable-select">Improved Factions</h2></a>
-            </div>
-        </div>
-    </body>
+<h1 class="title" style="margin-top: 28%;">Skills</h1>
+<div class="project-container" id="skills-container">
+    <div class="project">
+        <img class="disable-select project-thumbnail" draggable="false" height="auto" src="Images/logos/discordjs.svg"
+             width="100%">
+        <a href="https://discord.js.org/#/" target="_blank"><h2 class="center disable-select">Discord.js Bots</h2></a>
+    </div>
+    <div class="project">
+        <img class="disable-select project-thumbnail" draggable="false" height="auto" src="Images/logos/spigot.png"
+             width="100%">
+        <a href="https://spigotmc.org/" target="_blank"><h2 class="center disable-select">Minecraft Spigot Plugins</h2>
+        </a>
+    </div>
+    <div class="project">
+        <img class="disable-select project-thumbnail" draggable="false" height="auto" src="Images/logos/forge.png"
+             width="100%">
+        <a href="https://forums.minecraftforge.net/" target="_blank"><h2 class="center disable-select">Minecraft Forge
+            Mods</h2></a>
+    </div>
+    <div class="project">
+        <img class="disable-select project-thumbnail" draggable="false" height="auto" src="Images/logos/fabric.png"
+             width="100%">
+        <a href="https://fabricmc.net/" target="_blank"><h2 class="center disable-select">Minecraft Fabric Mods</h2></a>
+    </div>
+    <div class="project">
+        <img class="disable-select project-thumbnail" draggable="false" height="auto" src="Images/logos/tensorflow.svg"
+             width="100%">
+        <a href="https://www.tensorflow.org/" target="_blank"><h2 class="center disable-select">Machine learning with
+            tensorflow</h2></a>
+    </div>
+    <div class="project">
+        <img class="disable-select project-thumbnail" draggable="false" height="auto" src="Images/logos/java.svg"
+             width="100%">
+        <a href="https://java.com/" target="_blank"><h2 class="center disable-select">Java</h2></a>
+    </div>
+    <div class="project">
+        <img class="disable-select project-thumbnail" draggable="false" height="auto" src="Images/logos/nodejs.svg"
+             width="100%">
+        <a href="https://nodejs.org/" target="_blank"><h2 class="center disable-select">NodeJs</h2></a>
+    </div>
+    <div class="project">
+        <img class="disable-select project-thumbnail" draggable="false" height="auto" src="Images/logos/python.svg"
+             width="100%">
+        <a href="https://www.python.org/" target="_blank"><h2 class="center disable-select">Python</h2></a>
+    </div>
+    <div class="project">
+        <img class="disable-select project-thumbnail" draggable="false" height="auto" src="Images/logos/C.png"
+             width="100%">
+        <a href="https://en.wikipedia.org/wiki/The_C_Programming_Language" target="_blank"><h2
+                class="center disable-select">C</h2></a>
+    </div>
+    <div class="project">
+        <img class="disable-select project-thumbnail" draggable="false" height="auto" src="Images/logos/Cpp.png"
+             width="100%">
+        <a href="https://en.wikipedia.org/wiki/CPP" target="_blank"><h2 class="center disable-select">C++</h2></a>
+    </div>
+    <div class="project">
+        <img class="disable-select project-thumbnail" draggable="false" height="auto" src="Images/logos/C%23.png"
+             width="100%">
+        <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" target="_blank"><h2
+                class="center disable-select">C#</h2></a>
+    </div>
+    <div class="project">
+        <img class="disable-select project-thumbnail" draggable="false" height="auto" src="Images/logos/android.svg"
+             width="100%">
+        <a href="https://developer.android.com/" target="_blank"><h2 class="center disable-select">Android</h2></a>
+    </div>
+</div>
+<h1 class="title">Projects</h1>
+<div class="project-container" id="project-container">
+    <div class="project">
+        <img class="disable-select project-thumbnail" draggable="false" height="auto" src="Images/ImprovedFactions.png"
+             width="100%">
+        <a href="improved-factions/index.html"><h2 class="center disable-select">Improved Factions</h2></a>
+    </div>
+    <div class="project">
+        <img class="disable-select project-thumbnail" draggable="false" height="auto" src="Images/dungeon-generator.png"
+             width="100%">
+        <a href="dungeon-generator/index.html"><h2 class="center disable-select">Dungeon Generator</h2></a>
+    </div>
+</div>
+</body>
 </html>
