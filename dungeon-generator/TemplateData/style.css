@@ -1,6 +1,10 @@
 body {
     padding: 0;
-    margin: 0
+    margin: 0;
+    background: #101821 url("../../Images/Waves_start.svg") no-repeat;
+    background-size: 100%;
+    font-family: Helvetica, serif;
+    color: #fff;
 }
 
 #unity-container {
