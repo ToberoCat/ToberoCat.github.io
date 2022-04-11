@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Deep Deep Dungeon</title>
+    <title>Unity WebGL Player | Dungeon Generator</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="stylesheet" href="../Styles/startStyles.css">
   </head>
   <body>
+    <a href="dungeon-generator.apk"><h1 class="tobero disable-select">Download for Android</h1></a>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=960 height=600></canvas>
       <div id="unity-loading-bar">
@@ -20,7 +22,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Deep Deep Dungeon</div>
+        <div id="unity-build-title">Dungeon Generator</div>
       </div>
     </div>
     <script>
@@ -62,8 +64,8 @@
         frameworkUrl: buildUrl + "/dungeon-generator.framework.js",
         codeUrl: buildUrl + "/dungeon-generator.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "Tobero",
-        productName: "Deep Deep Dungeon",
+        companyName: "DefaultCompany",
+        productName: "Dungeon Generator",
         productVersion: "1.0",
         showBanner: unityShowBanner,
       };
