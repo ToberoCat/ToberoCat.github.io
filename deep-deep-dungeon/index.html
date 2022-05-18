@@ -3,24 +3,23 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Deep Deep Dungeon</title>
+    <title>Deep deep dungeon</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="stylesheet" href="../Styles/startStyles.css">
   </head>
   <body>
+    <a href="deep-deep-dungeon.apk"><h1 class="tobero disable-select">Download for Android </h1></a>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=960 height=600></canvas>
       <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
       <div id="unity-warning"> </div>
       <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Deep Deep Dungeon</div>
       </div>
     </div>
     <script>
@@ -56,14 +55,14 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/deep-deep-dungeon.loader.js";
+      var loaderUrl = buildUrl + "/dungeon-generator.loader.js";
       var config = {
-        dataUrl: buildUrl + "/deep-deep-dungeon.data",
-        frameworkUrl: buildUrl + "/deep-deep-dungeon.framework.js",
-        codeUrl: buildUrl + "/deep-deep-dungeon.wasm",
+        dataUrl: buildUrl + "/dungeon-generator.data",
+        frameworkUrl: buildUrl + "/dungeon-generator.framework.js",
+        codeUrl: buildUrl + "/dungeon-generator.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "Tobero",
-        productName: "Deep Deep Dungeon",
+        companyName: "DefaultCompany",
+        productName: "Dungeon Generator",
         productVersion: "1.0",
         showBanner: unityShowBanner,
       };
@@ -95,8 +94,8 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "880px";
+        canvas.style.height = "495px";
       }
 
       loadingBar.style.display = "block";
